@@ -1,0 +1,294 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <h5 class="m-2" style="color: white;">Kino</h5>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/home">Repertuar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cennik</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Regulamin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+            </li>
+      </ul>
+      <form class="d-flex">
+        <a *ngIf="loggedInUser == true" class="btn btn-outline-light" (click)="logout()">Wyloguj się</a>
+        <a *ngIf="loggedInUser == false" class="btn btn-outline-light" href="login">Zaloguj się</a>
+      </form>
+  </div>
+</nav>
+
+<div class="container pt-5 description" *ngIf="title=='Spider-man: Bez drogi do domu Dubbing'">
+    <div class="row">
+        <div class="col-sm-12 px-2">
+            <h2>Spider-man: Bez drogi do domu (Dubbing)</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 px-2">
+            <p>
+                <br><br>
+                Gatunek: film akcji, fantastyka naukowa
+                <br><br>
+                Data premiery: 17 grudnia 2021
+                <br><br>
+                Fantastyczno-naukowy film akcji stworzony w oparciu o komiksy wytwórki Marvel Comics. W rolę tytułowego bohatera wciela się Tom Holland.
+                <br><br>
+                Po ujawnieniu prawdziwej tożsamości Spider-mana udaje się on do Stephena Strange'a aby ten przy pomocy zaklęcia ponownie ukrył jego tożsamość. Jednak zaklęcie to wymyka się spod kontroli.
+            </p>
+            <!-- <div class="d-flex flex-row  justify-content-end pt-3">
+                <div class="align-middle">
+                    <p class="mt-2">
+                        Sobota 01.01, godzina 17:40
+                    </p>
+                </div>
+                <div class="mx-3">
+                    <a class="btn btn-success" href="ticket">Kup bilet</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-sm-4 px-2 pt-5">
+            <table class="table table-success">
+                <thead>
+                    <tr>
+                      <th scope="col">Data seansu</th>
+                      <th scope="col">Godzina</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Sobota 01.01</td>
+                      <td>17:40</td>
+                      <td><a class="btn btn-outline-success btn-sm" href="ticket/Spider-man: Bez drogi do domu Dubbing/Sobota 01.01/17:40">Kup bilet</a></td>
+                    </tr>
+                    <tr>
+                      <td>Wtorek 04.01</td>
+                      <td>15:45</td>
+                      <td><a class="btn btn-outline-success btn-sm" href="ticket/Spider-man: Bez drogi do domu Dubbing/Wtorek 04.01/15:45">Kup bilet</a></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5 description" *ngIf="title=='Diuna Napisy'">
+    <div class="row">
+        <div class="col-sm-12 px-2">
+            <h2>Diuna (Napisy)</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 px-2">
+            <p>
+                <br><br>
+                Gatunek: film akcji, fantastyka naukowa
+                <br><br>
+                Data premiery: 3 września 2021
+                <br><br>
+                Diuna opowiada historię niezwykłej, pełnej przygód i emocji podróży Paula Atreidesa.
+                <br><br>
+                Na planecie wybucha zażarty konflikt o dostęp do niewystępującej nigdzie indziej, najcenniejszej ze znanych substancji. Wyzwala ona w ludziach ich największy potencjał. Ale wojnę przetrwają tylko ci, którzy pokonają swój strach.
+            </p>
+            <!-- <div class="d-flex flex-row  justify-content-end pt-3">
+                <div class="align-middle">
+                    <p class="mt-2">
+                        Sobota 01.01, godzina 17:40
+                    </p>
+                </div>
+                <div class="mx-3">
+                    <a class="btn btn-success" href="ticket">Kup bilet</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-sm-4 px-2 pt-5">
+            <table class="table table-success">
+                <thead>
+                    <tr>
+                      <th scope="col">Data seansu</th>
+                      <th scope="col">Godzina</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Sobota 01.01</td>
+                      <td>19:15</td>
+                      <td><a class="btn btn-outline-success btn-sm" href="ticket/Diuna Napisy/Sobota 01.01/19:15">Kup bilet</a></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5 description" *ngIf="title=='Diuna Dubbing'">
+    <div class="row">
+        <div class="col-sm-12 px-2">
+            <h2>Diuna (Dubbing)</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 px-2">
+            <p>
+                <br><br>
+                Gatunek: film akcji, fantastyka naukowa
+                <br><br>
+                Data premiery: 3 września 2021
+                <br><br>
+                Diuna opowiada historię niezwykłej, pełnej przygód i emocji podróży Paula Atreidesa.
+                <br><br>
+                Na planecie wybucha zażarty konflikt o dostęp do niewystępującej nigdzie indziej, najcenniejszej ze znanych substancji. Wyzwala ona w ludziach ich największy potencjał. Ale wojnę przetrwają tylko ci, którzy pokonają swój strach.
+            </p>
+            <!-- <div class="d-flex flex-row  justify-content-end pt-3">
+                <div class="align-middle">
+                    <p class="mt-2">
+                        Sobota 01.01, godzina 17:40
+                    </p>
+                </div>
+                <div class="mx-3">
+                    <a class="btn btn-success" href="ticket">Kup bilet</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-sm-4 px-2 pt-5">
+            <table class="table table-success">
+                <thead>
+                    <tr>
+                      <th scope="col">Data seansu</th>
+                      <th scope="col">Godzina</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Poniedziałek 03.01</td>
+                        <td>16:25</td>
+                        <td><a class="btn btn-outline-success btn-sm" href="ticket/Diuna Dubbing/Poniedziałek 03.01/16:25">Kup bilet</a></td>
+                      </tr>
+                      <tr>
+                        <td>Wtorek 04.01</td>
+                        <td>19:05</td>
+                        <td><a class="btn btn-outline-success btn-sm" href="ticket/Diuna Dubbing/Wtorek 04.01/19:05">Kup bilet</a></td>
+                      </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5 description" *ngIf="title=='Matrix Zmartwychwstania Napisy'">
+    <div class="row">
+        <div class="col-sm-12 px-2">
+            <h2>Matrix Zmartwychwstania (Napisy)</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 px-2">
+            <p>
+                <br><br>
+                Gatunek: film akcji, fantastyka naukowa
+                <br><br>
+                Data premiery: 22 grudnia 2021
+                <br><br>
+                Podążaj za Neo, który prowadzi zwyczajne życie w San Francisco, gdzie jego terapeuta przepisuje mu niebieskie pigułki.
+                <br><br>
+                Jednak Morfeusz oferuje mu czerwoną pigułkę i ponownie otwiera jego umysł na świat Matrix.
+            </p>
+            <!-- <div class="d-flex flex-row  justify-content-end pt-3">
+                <div class="align-middle">
+                    <p class="mt-2">
+                        Sobota 01.01, godzina 17:40
+                    </p>
+                </div>
+                <div class="mx-3">
+                    <a class="btn btn-success" href="ticket">Kup bilet</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-sm-4 px-2 pt-5">
+            <table class="table table-success">
+                <thead>
+                    <tr>
+                      <th scope="col">Data seansu</th>
+                      <th scope="col">Godzina</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Poniedziałek 03.01</td>
+                      <td>16:10</td>
+                      <td><a class="btn btn-outline-success btn-sm" href="ticket/Matrix Zmartwychwstania Napisy/Poniedziałek 03.01/16:10">Kup bilet</a></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<div class="container pt-5 description" *ngIf="title=='Matrix Zmartwychwstania Dubbing'">
+    <div class="row">
+        <div class="col-sm-12 px-2">
+            <h2>Matrix Zmartwychwstania (Dubbing)</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 px-2">
+            <p>
+                <br><br>
+                Gatunek: film akcji, fantastyka naukowa
+                <br><br>
+                Data premiery: 22 grudnia 2021
+                <br><br>
+                Podążaj za Neo, który prowadzi zwyczajne życie w San Francisco, gdzie jego terapeuta przepisuje mu niebieskie pigułki.
+                <br><br>
+                Jednak Morfeusz oferuje mu czerwoną pigułkę i ponownie otwiera jego umysł na świat Matrix.
+            </p>
+            <!-- <div class="d-flex flex-row  justify-content-end pt-3">
+                <div class="align-middle">
+                    <p class="mt-2">
+                        Sobota 01.01, godzina 17:40
+                    </p>
+                </div>
+                <div class="mx-3">
+                    <a class="btn btn-success" href="ticket">Kup bilet</a>
+                </div>
+            </div> -->
+        </div>
+        <div class="col-sm-4 px-2 pt-5">
+            <table class="table table-success">
+                <thead>
+                    <tr>
+                      <th scope="col">Data seansu</th>
+                      <th scope="col">Godzina</th>
+                      <th scope="col"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                        <td>Poniedziałek 03.01</td>
+                        <td>20:00</td>
+                        <td><a class="btn btn-outline-success btn-sm" href="ticket/Matrix Zmartwychwstania Dubbing/Poniedziałek 03.01/20:00">Kup bilet</a></td>
+                      </tr>
+                    <tr>
+                      <td>Wtorek 04.01</td>
+                      <td>17:20</td>
+                      <td><a class="btn btn-outline-success btn-sm" href="ticket/Matrix Zmartwychwstania Dubbing/Wtorek 04.01/17:20">Kup bilet</a></td>
+                    </tr>
+                  </tbody>
+            </table>
+        </div>
+    </div>
+</div>

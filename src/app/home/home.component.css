@@ -1,0 +1,9 @@
+.searchbar {
+    width: fit-content;
+    float: right;
+}
+
+.movies {
+    border: grey;
+    border-width: 1px;
+}

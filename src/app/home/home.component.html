@@ -1,0 +1,197 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <h5 class="m-2" style="color: white;">Kino</h5>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="/home">Repertuar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cennik</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Regulamin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+            </li>
+      </ul>
+      <form class="d-flex">
+        <a *ngIf="loggedInUser == true" class="btn btn-outline-light" (click)="logout()">Wyloguj się</a>
+        <a *ngIf="loggedInUser == false" class="btn btn-outline-light" href="login">Zaloguj się</a>
+      </form>
+  </div>
+</nav>
+<div class="container pt-3">
+    <div class="searchbar">
+        <div class="row">
+            <div class="col-sm-11">
+                <input [(ngModel)]="selected"
+                       [typeahead]="movies"
+                       class="form-control"
+                       placeholder="Szukaj...">
+            </div>
+            <div class="col-sm-1">
+                <button class="btn btn-success" (click)="search()">Szukaj</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container pt-5 text-center px-2">
+    <div class="d-inline-flex">
+        <div class="row">
+            <div class="col">
+                <h1>Repertuar</h1>
+            </div>
+            <div class="col pt-2">
+                <button class="btn btn-outline-success">&lt;</button>
+            </div>
+            <div class="col pt-1">
+                <h5>Styczeń 2022</h5>
+            </div>
+            <div class="col pt-2">
+                <button class="btn btn-outline-success">&gt;</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 border border-3">
+    <div class="row">
+        <div class="col-sm-2 border border-2 bg-light text-center pt-2">
+            <h3>01.01</h3>Sobota
+        </div>
+        <div class="col-sm-10 border border-2">
+            <div class="d-flex border-bottom border-1 py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">17:40</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Spider-man: Bez drogi do domu (Dubbing)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Spider-man: Bez drogi do domu Dubbing">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Spider-man: Bez drogi do domu Dubbing/Sobota 01.01/17:40">Kup bilet</a>
+                </div>
+            </div>
+            <div class="d-flex py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">19:15</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Diuna (Napisy)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Diuna Napisy">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Diuna Napisy/Sobota 01.01/19:15">Kup bilet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mt-4 border border-3">
+    <div class="row">
+        <div class="col-sm-2 border border-2 bg-light text-center pt-2">
+            <h3>03.01</h3>Poniedziałek
+        </div>
+        <div class="col-sm-10 border border-2">
+            <div class="d-flex border-bottom border-1 py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">16:10</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Matrix Zmartwychwstania (Napisy)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Matrix Zmartwychwstania Napisy">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Matrix Zmartwychwstania Napisy/Poniedziałek 03.01/16:10">Kup bilet</a>
+                </div>
+            </div>
+            <div class="d-flex border-bottom border-1 py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">16:25</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Diuna (Dubbing)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Diuna Dubbing">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Diuna Napisy/Poniedziałek 03.01/16:25">Kup bilet</a>
+                </div>
+            </div>
+            <div class="d-flex py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">20:00</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Matrix Zmartwychwstania (Dubbing)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Matrix Zmartwychwstania Dubbing">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Matrix Zmartwychwstania Dubbing/Poniedziałek 03.01/20:00">Kup bilet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-4 border border-3">
+    <div class="row">
+        <div class="col-sm-2 border border-2 bg-light text-center pt-2">
+            <h3>04.01</h3>Wtorek
+        </div>
+        <div class="col-sm-10 border border-2">
+            <div class="d-flex border-bottom border-1 py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">15:45</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Spider-man: Bez drogi do domu (Dubbing)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Spider-man: Bez drogi do domu Dubbing">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Spider-man: Bez drogi do domu Dubbing/Wtorek 04.01/15:45">Kup bilet</a>
+                </div>
+            </div>
+            <div class="d-flex border-bottom border-1 py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">17:20</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Matrix Zmartwychwstania (Dubbing)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Matrix Zmartwychwstania Dubbing">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Matrix Zmartwychwstania Dubbing/Wtorek 04.01/17:20">Kup bilet</a>
+                </div>
+            </div>
+            <div class="d-flex py-2">
+                <div class="mx-3">
+                    <h5 class="pr-3">19:05</h5>
+                </div>
+                <div class="flex-grow-1">
+                    Diuna (Dubbing)
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-outline-success btn-sm" href="movie/Diuna Dubbing">Zobacz opis</a>
+                </div>
+                <div class="mx-3 mb-1">
+                    <a class="btn btn-success btn-sm" href="ticket/Diuna Dubbing/Wtorek 04.01/19:05">Kup bilet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

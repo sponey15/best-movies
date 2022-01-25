@@ -1,0 +1,10 @@
+.searchbar {
+    width: fit-content;
+    float: right;
+}
+
+.btn-check:checked+.btn-success {
+    background-color: #ffca2c;
+    border-color: #ffca2c;
+}
+

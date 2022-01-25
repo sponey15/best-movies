@@ -1,0 +1,262 @@
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <h5 class="m-2" style="color: white;">Kino</h5>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/home">Repertuar</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cennik</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Regulamin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Kontakt</a>
+            </li>
+        </ul>
+        <form class="d-flex">
+            <a *ngIf="loggedInUser == true" class="btn btn-outline-light" (click)="logout()">Wyloguj się</a>
+            <a *ngIf="loggedInUser == false" class="btn btn-outline-light" href="login">Zaloguj się</a>
+        </form>
+  </div>
+</nav>
+<div class="container py-3">
+
+</div>
+<div class="container">
+    <h3>Wybierz miejsca</h3>
+    <div class="row">
+        <div class="col-sm-8 mt-3">
+            <div class="mx-5">
+                <button class="btn btn-sm btn-link m-1"></button><button class="btn btn-sm btn-link m-1"></button><button class="btn btn-sm btn-link m-1"></button><button class="btn btn-sm btn-link m-1"></button><button class="btn btn-sm btn-link m-1"></button>
+                <button class="btn btn-sm btn-secondary disabled m-1 px-5 mx-5">Ekran</button>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 01:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-1" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-1">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-2" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-2">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-3" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-3">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-4" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-4">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <input type="checkbox" class="btn-check" id="btn-check-5" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-5">05</label>
+                <button class="btn btn-sm btn-secondary disabled m-1">06</button>
+                <button class="btn btn-sm btn-secondary disabled m-1">07</button>
+                <input type="checkbox" class="btn-check" id="btn-check-8" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-8">08</label>
+                <input type="checkbox" class="btn-check" id="btn-check-9" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-9">09</label>
+                <input type="checkbox" class="btn-check" id="btn-check-10" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-10">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-11" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-11">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-12" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-12">12</label>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 02:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-13" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-13">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-14" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-14">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-15" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-15">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-16" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-16">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <input type="checkbox" class="btn-check" id="btn-check-17" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-17">05</label>
+                <input type="checkbox" class="btn-check" id="btn-check-18" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-18">06</label>
+                <input type="checkbox" class="btn-check" id="btn-check-19" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-19">07</label>
+                <input type="checkbox" class="btn-check" id="btn-check-20" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-20">08</label>
+                <input type="checkbox" class="btn-check" id="btn-check-21" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-21">09</label>
+                <input type="checkbox" class="btn-check" id="btn-check-22" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-22">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-23" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-23">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-24" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-24">12</label>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 03:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-25" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-25">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-26" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-26">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-27" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-27">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-28" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-28">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <input type="checkbox" class="btn-check" id="btn-check-29" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-29">05</label>
+                <input type="checkbox" class="btn-check" id="btn-check-30" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-30">06</label>
+                <input type="checkbox" class="btn-check" id="btn-check-31" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-31">07</label>
+                <input type="checkbox" class="btn-check" id="btn-check-32" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-32">08</label>
+                <input type="checkbox" class="btn-check" id="btn-check-33" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-33">09</label>
+                <input type="checkbox" class="btn-check" id="btn-check-34" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-34">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-35" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-35">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-36" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-36">12</label>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 04:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-37" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-37">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-38" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-38">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-39" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-39">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-40" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-40">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <button class="btn btn-sm btn-secondary disabled m-1">05</button>
+                <input type="checkbox" class="btn-check" id="btn-check-41" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-41">06</label>
+                <input type="checkbox" class="btn-check" id="btn-check-42" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-42">07</label>
+                <input type="checkbox" class="btn-check" id="btn-check-43" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-43">08</label>
+                <input type="checkbox" class="btn-check" id="btn-check-44" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-44">09</label>
+                <input type="checkbox" class="btn-check" id="btn-check-45" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-45">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-46" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-46">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-47" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-47">12</label>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 05:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-48" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-48">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-49" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-49">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-50" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-50">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-51" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-51">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <input type="checkbox" class="btn-check" id="btn-check-52" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-52">05</label>
+                <input type="checkbox" class="btn-check" id="btn-check-53" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-53">06</label>
+                <input type="checkbox" class="btn-check" id="btn-check-54" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-54">07</label>
+                <button class="btn btn-sm btn-secondary disabled m-1">08</button>
+                <button class="btn btn-sm btn-secondary disabled m-1">09</button>
+                <input type="checkbox" class="btn-check" id="btn-check-55" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-55">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-56" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-56">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-57" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-57">12</label>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 06:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-58" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-58">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-59" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-59">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-60" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-60">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-61" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-61">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <input type="checkbox" class="btn-check" id="btn-check-62" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-62">05</label>
+                <input type="checkbox" class="btn-check" id="btn-check-63" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-63">06</label>
+                <input type="checkbox" class="btn-check" id="btn-check-64" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-64">07</label>
+                <input type="checkbox" class="btn-check" id="btn-check-65" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-65">08</label>
+                <input type="checkbox" class="btn-check" id="btn-check-66" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-66">09</label>
+                <input type="checkbox" class="btn-check" id="btn-check-67" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-67">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-68" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-68">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-69" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-69">12</label>
+            </div>
+            <div class="flex-row">
+                <label class="m-1">Rząd 07:</label>
+                <input type="checkbox" class="btn-check" id="btn-check-70" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-70">01</label>
+                <input type="checkbox" class="btn-check" id="btn-check-71" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-71">02</label>
+                <input type="checkbox" class="btn-check" id="btn-check-72" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-72">03</label>
+                <input type="checkbox" class="btn-check" id="btn-check-73" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-73">04</label>
+                <button class="btn btn-sm btn-success m-1 invisible">123</button>
+                <input type="checkbox" class="btn-check" id="btn-check-74" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-74">05</label>
+                <input type="checkbox" class="btn-check" id="btn-check-75" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-75">06</label>
+                <input type="checkbox" class="btn-check" id="btn-check-76" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-76">07</label>
+                <input type="checkbox" class="btn-check" id="btn-check-77" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-77">08</label>
+                <input type="checkbox" class="btn-check" id="btn-check-78" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-78">09</label>
+                <input type="checkbox" class="btn-check" id="btn-check-79" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-79">10</label>
+                <input type="checkbox" class="btn-check" id="btn-check-80" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-80">11</label>
+                <input type="checkbox" class="btn-check" id="btn-check-81" (click)="enableDisableRule($event.target.checked)">
+                <label class="btn btn-sm btn-success m-1" for="btn-check-81">12</label>
+                <div class="container pt-5">
+                    <div class="row row-cols-auto">
+                        <div class="col">
+                            <label for="legend">Legenda: </label>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-sm btn-success m-1">01</button>
+                            <label for="">Wolne</label>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-sm btn-secondary disabled m-1">01</button>
+                            <label for="">Zarezerwowane</label>
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-sm btn-warning m-1">01</button>
+                            <label for="">Twój wybór</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container col-sm-4 border mt-5 p-3">
+            <div class="summary">
+                <h4 class="text-center">Podsumowanie</h4>
+                <p><b>Film: </b>{{title}}</p>
+                <p><b>Data seansu: </b>{{date}}</p>
+                <p><b>Godzina: </b>{{hour}}</p>
+                <p><b>Ilość biletów: </b>{{quantity}}</p>
+                <p><b>Cena: </b>{{price}} zł</p>
+            </div>
+            <div class="d-flex justify-content-end">
+                <a class="btn btn-success" href="ticket">Przejdź do płatności</a>
+            </div>
+        </div>
+    </div>
+</div>
