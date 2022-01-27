@@ -7,3 +7,9 @@
     border: grey;
     border-width: 1px;
 }
+
+.cenered-text {
+    text-align: center;
+    color: #198754;
+    font-size: 22px;
+}

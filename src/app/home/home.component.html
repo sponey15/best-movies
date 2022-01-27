@@ -45,17 +45,22 @@
                 <h1>Repertuar</h1>
             </div>
             <div class="col pt-2">
-                <button class="btn btn-outline-success">&lt;</button>
+                <button *ngIf="currentMonthId != 0" class="btn btn-outline-success" (click)="prevMonth()">&lt;</button>
+                <button *ngIf="currentMonthId == 0" class="btn btn-outline-success" disabled>&lt;</button>
             </div>
             <div class="col pt-1">
-                <h5>Styczeń 2022</h5>
+                <h5>{{currentMonth}} 2022</h5>
             </div>
             <div class="col pt-2">
-                <button class="btn btn-outline-success">&gt;</button>
+                <button *ngIf="currentMonthId != 11" class="btn btn-outline-success" (click)="nextMonth()">&gt;</button>
+                <button *ngIf="currentMonthId == 11" class="btn btn-outline-success" disabled>&gt;</button>
             </div>
         </div>
     </div>
 </div>
+
+<div *ngIf="currentMonthId == 0">
+
 <div class="container mt-4 border border-3">
     <div class="row">
         <div class="col-sm-2 border border-2 bg-light text-center pt-2">
@@ -194,4 +199,9 @@
             </div>
         </div>
     </div>
+</div>
+</div>
+
+<div *ngIf="currentMonthId != 0">
+   <p class="cenered-text mt-5">Obecnie nie ma dostępnego repertuaru dla wybranego miesiąca.</p> 
 </div>
