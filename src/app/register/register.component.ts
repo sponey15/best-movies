@@ -58,7 +58,7 @@ export class RegisterComponent implements OnInit {
   register() {
     localStorage.setItem(Math.floor((Math.random() * 100) + 1).toString(), JSON.stringify(this.registerForm.value));
     this.toastr.success('Zarejestrowano pomyślnie');
-    this.router.navigate(['/home']);
+    this.router.navigate(['/login']);
   }
 
   logout() {

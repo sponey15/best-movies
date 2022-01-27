@@ -49,6 +49,7 @@ export class HomeComponent implements OnInit {
 
   logout() {
     this.cinemaService.logout();
+    this.loggedInUser = false;
   }
 
   search() {
